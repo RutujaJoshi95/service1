@@ -1,0 +1,23 @@
+<p>posts-form works!</p>
+
+<form #postForm="ngForm" (ngSubmit)="onPostAdd()">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" ngModel id="title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <textarea id="title" name="body" ngModel rows="4" class="form-control"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="userId">UserId</label>
+        <select name="userId" ngModel id="userId" class="form-control">
+            <option [value]="val" *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]">
+                {{val}}
+            </option>
+        </select>
+    </div>
+
+    <button class="btn btn-block btn sm btn-info">Add Post</button>
+</form>
